@@ -1,6 +1,15 @@
-﻿body {
-    padding-top: 50px;
+﻿@font-face {
+    font-family: "SegoeUi";
+    src: url('../fonts/segoeui.ttf');
+}
+
+body {
+    padding-top: 80px;
     padding-bottom: 20px;
+    color: #555555;
+
+    font-family: "SegoeUi";
+    font-weight: lighter;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +30,83 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/* Override navbar-default */
+.navbar-default {
+    background-color: white !important;
+    border-bottom: 4px solid #558811 !important;
+}
+
+/* Override NavBar Links */
+.navbar-nav a {
+    color: #555555 !important;
+}
+
+.navbar-nav a:hover {
+    color: #336600 !important;
+}
+
+/* Override primary */
+.text-primary {
+    color: #558811 !important;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #458811;
+    border-color: #358811;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    color: #ffffff;
+    background-color: #358811;
+    border-color: #258811;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: #558811;
+    border-color: #358811;
+}
+
+/* COLORS */
+.text-secondary {
+    color: #336600 !important;
+}
+
+.text-dark {
+    color: #224400 !important;
+}
+
+/* Font Weight */
+.font-normal {
+    font-weight: 500;
+}
+
+.font-semi-light {
+    font-weight: 300;
 }
