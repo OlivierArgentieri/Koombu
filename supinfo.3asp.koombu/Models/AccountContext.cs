@@ -9,7 +9,7 @@ namespace supinfo._3asp.koombu.Models
     public class AccountContext : DbContext
     {
         
-        public DbSet<UserAccount> UserAccounts { get; set; }
+        public DbSet<UserAccountViewModel> UserAccounts { get; set; }
 
         public AccountContext() : base("DefaultConnection")
         {

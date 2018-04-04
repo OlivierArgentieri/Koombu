@@ -1,4 +1,4 @@
-﻿@model IEnumerable<supinfo._3asp.koombu.Models.UserAccount>
+﻿@model IEnumerable<supinfo._3asp.koombu.Models.UserAccountViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -24,7 +24,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr>    
         <td>
             @Html.DisplayFor(modelItem => item.FirstName)
         </td>

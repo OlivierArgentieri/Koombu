@@ -6,7 +6,7 @@ using System.Web;
 
 namespace supinfo._3asp.koombu.Models
 {
-    public class UserAccount
+    public class UserAccountViewModel
     {
         [Key]
         public int ID { get; set; }

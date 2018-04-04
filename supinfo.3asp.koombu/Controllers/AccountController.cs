@@ -25,7 +25,7 @@ namespace supinfo._3asp.koombu.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(UserAccount account)
+        public ActionResult Register(UserAccountViewModel account)
         {
             if (ModelState.IsValid)
             {
@@ -47,7 +47,7 @@ namespace supinfo._3asp.koombu.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(UserAccount user)
+        public ActionResult Login(UserAccountViewModel user)
         {
             using (AccountContext db = new AccountContext())
             {
