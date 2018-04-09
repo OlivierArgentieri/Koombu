@@ -13,9 +13,9 @@ namespace supinfo._3asp.koombu.Controllers
         // GET: Account
         public ActionResult Index()
         {
-            using (AccountContext db = new AccountContext())
+            using (UserContext db = new UserContext())
             {
-                return View(db.UserAccounts.ToList());
+                return View(db.Users.ToList());
             }
         }
 
@@ -25,13 +25,13 @@ namespace supinfo._3asp.koombu.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(UserAccountViewModel account)
+        public ActionResult Register(UserModel account)
         {
             if (ModelState.IsValid)
             {
-                using (AccountContext db = new AccountContext())
+                using (UserContext db = new UserContext())
                 {
-                    db.UserAccounts.Add(account);
+                    db.Users.Add(account);
                     db.SaveChanges();
                 }
                 ModelState.Clear();
@@ -47,11 +47,11 @@ namespace supinfo._3asp.koombu.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(UserAccountViewModel user)
+        public ActionResult Login(UserModel user)
         {
-            using (AccountContext db = new AccountContext())
+            using (UserContext db = new UserContext())
             {
-                var usr = db.UserAccounts.Where(u => u.Email == user.Email && u.Password == user.Password)
+                var usr = db.Users.Where(u => u.Email == user.Email && u.Password == user.Password)
                     .FirstOrDefault();
 
                 if (usr != null)

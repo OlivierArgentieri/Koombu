@@ -6,12 +6,12 @@ using System.Data.Entity;
 
 namespace supinfo._3asp.koombu.Models
 {
-    public class AccountContext : DbContext
+    public class UserContext : DbContext
     {
         
-        public DbSet<UserAccountViewModel> UserAccounts { get; set; }
+        public DbSet<UserModel> Users { get; set; }
 
-        public AccountContext() : base("DefaultConnection")
+        public UserContext() : base("DefaultConnection")
         {
             
         }
